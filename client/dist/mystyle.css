@@ -1,0 +1,38 @@
+h1 {
+  font-family: 'Luckiest Guy', cursive;
+  text-align: center;
+}
+
+#location-input-div {
+  text-align: center;
+}
+
+input[type="text"] {
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+}
+
+th {
+  font-family: 'Luckiest Guy', cursive;
+}
+
+table {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+#or {
+  font-family: 'Luckiest Guy', cursive;
+  padding-top: 30px;
+}
+
+body {
+  background-color: rgb(233, 155, 119);
+}
+
+#ramen-table {
+  padding-top: 50px;
+}
