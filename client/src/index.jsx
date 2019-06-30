@@ -92,7 +92,7 @@ class App extends React.Component {
             <th>Review Count</th>
             <th>Open Now?</th>
           </tr> 
-          {this.state.restaurants.map(restaurant => <Restaurant count={restaurant.review_count} price={restaurant.price} rating={restaurant.rating} address={restaurant.location.display_address} name={restaurant.name} phone={restaurant.display_phone} photo={restaurant.image_url} closed={restaurant.is_closed}/>)}
+          {this.state.restaurants.map(restaurant => <Restaurant url={restaurant.url} count={restaurant.review_count} price={restaurant.price} rating={restaurant.rating} address={restaurant.location.display_address} name={restaurant.name} phone={restaurant.display_phone} photo={restaurant.image_url} closed={restaurant.is_closed}/>)}
         </table>
         </div>
         <div id="map-div">
