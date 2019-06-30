@@ -14,8 +14,6 @@ const Map = (props) => {
   >
       <Marker
         text="Current Location"
-        phone=""
-        address=""
         lat={props.latitude}
         lng={props.longitude}
         current="true"
