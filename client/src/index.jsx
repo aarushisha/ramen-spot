@@ -12,6 +12,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      coordinates: {},
       restaurants: []
     }
     this.getLocation = this.getLocation.bind(this);
@@ -40,7 +41,7 @@ class App extends React.Component {
         }
       })
     .then(results => results.json())
-    .then(restaurants => this.setState({restaurants: restaurants.businesses}))
+    .then(restaurants => this.setState({restaurants: restaurants.businesses, coordinates: {lat: latitude, lng: longitude}}))
     .catch(() => console.log("something is wrong here"));
     });
   }
@@ -58,7 +59,7 @@ class App extends React.Component {
           }
         })
         .then(results => results.json())
-        .then(restaurants => this.setState({restaurants: restaurants.businesses}))
+        .then(restaurants => this.setState({restaurants: restaurants.businesses, coordinates: {lat: latitude, lng: longitude}}))
         .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"));
       });
     } else {
@@ -95,7 +96,7 @@ class App extends React.Component {
         </table>
         </div>
         <div id="map-div">
-        <Map />
+        <Map latitude={this.state.coordinates.lat} longitude={this.state.coordinates.lng}/>
         </div>
       </div>
     )

@@ -7,7 +7,7 @@ const Map = (props) => {
   <div style={{ height: '50vh', width: '35%' }} id="map">
   <GoogleMapReact
     bootstrapURLKeys={{ key: googleKey, libraries: ['places', 'directions'] }}
-    defaultCenter={[37.7749, -122.419]}
+    center={[props.latitude, props.longitude]}
     defaultZoom={11}
     yesIWantToUseGoogleMapApiInternals
   ></GoogleMapReact>
