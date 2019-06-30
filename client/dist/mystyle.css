@@ -30,9 +30,16 @@ table {
 }
 
 body {
-  background-color: rgb(233, 155, 119);
+  background-color: rgb(233, 190, 170);
 }
 
 #ramen-table {
   padding-top: 50px;
 }
+
+tr {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+tr:nth-child(even) {background-color: white;}
