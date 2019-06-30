@@ -52,3 +52,7 @@ table {
   float: right;
   margin-right: 10px;
 }
+
+#current-marker {
+  color: rgb(233, 190, 170);
+}
