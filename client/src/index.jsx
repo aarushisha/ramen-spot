@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import yelp from '../../yelp.js';
 import Restaurant from './components/restaurant.jsx';
 import googleKey from '../../google.js';
+import Map from "./components/map.jsx";
 
 const clientID = yelp.clientID;
 const apiKey  = yelp.apiKey;
@@ -92,6 +93,9 @@ class App extends React.Component {
           </tr>
           {this.state.restaurants.map(restaurant => <Restaurant count={restaurant.review_count} price={restaurant.price} rating={restaurant.rating} address={restaurant.location.display_address} name={restaurant.name} phone={restaurant.display_phone} photo={restaurant.image_url} closed={restaurant.is_closed}/>)}
         </table>
+        </div>
+        <div id="map-div">
+        <Map />
         </div>
       </div>
     )
