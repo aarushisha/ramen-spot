@@ -9,7 +9,7 @@ const Restaurant = (props) => {
         <td>{props.price}</td>
         <td>{props.rating}</td>
         <td>{props.count}</td>
-        <td>{props.closed === false ? "No" : "Yes"}</td>
+        <td>{props.closed === false ? "Yes" : "No"}</td>
       </tr>
   )
 }

@@ -9,15 +9,24 @@ const Map = (props) => {
   <GoogleMapReact
     bootstrapURLKeys={{ key: googleKey, libraries: ['places', 'directions'] }}
     center={[props.latitude, props.longitude]}
-    defaultZoom={11}
+    defaultZoom={15}
     yesIWantToUseGoogleMapApiInternals
   >
       <Marker
+        key={21}
         text="Current Location"
         lat={props.latitude}
         lng={props.longitude}
-        current="true"
+        current="false"
       />
+      {props.restaurants.map((restaurant, id) => (
+        <Marker
+        key={id}
+        text={restaurant.name}
+        lat={restaurant.coordinates.latitude} 
+        lng={restaurant.coordinates.longitude}
+        curent="false"/>
+      ))}
   </GoogleMapReact>
   </div>
   )
