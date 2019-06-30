@@ -96,7 +96,7 @@ class App extends React.Component {
         </table>
         </div>
         <div id="map-div">
-        <Map latitude={this.state.coordinates.lat} longitude={this.state.coordinates.lng}/>
+        <Map restaurants={this.state.restaurants} latitude={this.state.coordinates.lat} longitude={this.state.coordinates.lng}/>
         </div>
       </div>
     )

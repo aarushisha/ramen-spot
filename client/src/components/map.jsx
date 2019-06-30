@@ -1,6 +1,7 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
 import googleKey from '../../../google.js';
+import Marker from "./marker.jsx";
 
 const Map = (props) => {
   return (
@@ -10,7 +11,16 @@ const Map = (props) => {
     center={[props.latitude, props.longitude]}
     defaultZoom={11}
     yesIWantToUseGoogleMapApiInternals
-  ></GoogleMapReact>
+  >
+  {props.restaurants.map((restaurant, id) => (
+    <Marker text="My Marker" key={id} lat={restaurant.coordinates.latitude} lng={restaurant.coordinates.longitude} current="false"/>
+
+  ))}
+  
+  
+  
+  
+  </GoogleMapReact>
 
   </div>
   )

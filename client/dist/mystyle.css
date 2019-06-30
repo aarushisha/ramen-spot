@@ -22,6 +22,7 @@ th {
 table {
   font-family: 'Roboto', sans-serif;
   text-align: center;
+  width: 800px;
 }
 
 #or {
