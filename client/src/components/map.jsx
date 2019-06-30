@@ -12,16 +12,15 @@ const Map = (props) => {
     defaultZoom={11}
     yesIWantToUseGoogleMapApiInternals
   >
-  {props.restaurants.map((restaurant, id) => (
-    <Marker text="My Marker" key={id} lat={restaurant.coordinates.latitude} lng={restaurant.coordinates.longitude} current="false"/>
-
-  ))}
-  
-  
-  
-  
+      <Marker
+        text="Current Location"
+        phone=""
+        address=""
+        lat={props.latitude}
+        lng={props.longitude}
+        current="true"
+      />
   </GoogleMapReact>
-
   </div>
   )
 

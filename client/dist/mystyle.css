@@ -3,6 +3,8 @@ h1 {
   text-align: center;
 }
 
+
+
 #location-input-div {
   text-align: center;
 }
@@ -27,7 +29,7 @@ table {
 
 #or {
   font-family: 'Luckiest Guy', cursive;
-  padding-top: 30px;
+  padding-top: 15px;
 }
 
 body {
@@ -43,7 +45,7 @@ tr {
   padding-bottom: 20px;
 }
 
-tr:nth-child(even) {background-color: white;}
+tr:nth-child(even) {background-color: white; border-left: white 5px solid; border-right: white 5px solid}
 
 
 table {
