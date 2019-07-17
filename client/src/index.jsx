@@ -5,8 +5,8 @@ import Restaurant from './components/restaurant.jsx';
 // import googleKey from '../../google.js';
 import Map from "./components/map.jsx";
 
-const clientID = yelp.clientID || process.env.CLIENTID;
-const apiKey  = yelp.apiKey || process.env.APIKEY;
+const clientID = process.env.CLIENTID;
+const apiKey  = process.env.APIKEY;
 const googleKey = process.env.GOOGLEKEY;
 
 class App extends React.Component {
