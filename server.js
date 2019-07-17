@@ -8,6 +8,6 @@ app.use(express.static(__dirname + '/client/dist'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-app.listen(port, function() {
+app.listen(process.env.PORT || port, function() {
   console.log('listening on port', port);
 })

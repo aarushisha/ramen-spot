@@ -55,4 +55,5 @@ table {
 
 #current-marker {
   color: rgb(233, 190, 170);
+  border-radius: 100%;
 }

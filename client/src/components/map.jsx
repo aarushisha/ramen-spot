@@ -1,7 +1,9 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
-import googleKey from '../../../google.js';
+// import googleKey from '../../../google.js';
 import Marker from "./marker.jsx";
+
+const googleKey = process.env.GOOGLEKEY;
 
 const Map = (props) => {
   return (
@@ -10,12 +12,13 @@ const Map = (props) => {
     bootstrapURLKeys={{ key: googleKey, libraries: ['places', 'directions'] }}
     center={[props.latitude, props.longitude]}
     defaultZoom={13}
+    onGoogleApiLoaded={({map, maps}) => this.renderMarkers(map, maps)}
     yesIWantToUseGoogleMapApiInternals
   >
   <div id="current-marker">
   {[props.latitude].map( (latitude, id) => (
     <Marker 
-    text="Current Location"
+    text="*"
     lat={props.latitude}
     lng={props.longitude}/>
   ))}

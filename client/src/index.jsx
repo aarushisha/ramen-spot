@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import yelp from '../../yelp.js';
+// import yelp from '../../yelp.js';
 import Restaurant from './components/restaurant.jsx';
-import googleKey from '../../google.js';
+// import googleKey from '../../google.js';
 import Map from "./components/map.jsx";
 
-const clientID = yelp.clientID;
-const apiKey  = yelp.apiKey;
+const clientID = yelp.clientID || process.env.CLIENTID;
+const apiKey  = yelp.apiKey || process.env.APIKEY;
+const googleKey = process.env.GOOGLEKEY;
 
 class App extends React.Component {
   constructor(props) {
